@@ -1,0 +1,32 @@
+<app-nav-bar></app-nav-bar>
+<app-search-input></app-search-input>
+<div class="films-list">
+  <div *ngFor="let film of popularFilms">
+    <mat-card class="film-card" routerLink="/description/{{film.id}}">
+      <img
+        mat-card-image
+        [src]="
+          cfg.images.base_url +
+          cfg.images.backdrop_sizes[1] +
+          film.backdrop_path
+        "
+        [alt]=""
+      />
+      <mat-card-header>
+        <mat-card-title>{{ film.original_title }}</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions>
+        <!-- <mat-card-actions  *ngIf="!checkFavorites(film.id)"> -->
+        <button
+          mat-raised-button
+          class="btn-fav"
+          (click)="addFav($event, film)"
+        >
+          Favorite
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+<app-pagination></app-pagination>

@@ -1,0 +1,12 @@
+.pagination {
+  min-width: 10rem;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-back,
+.pagination-next {
+  width: 100px;
+  margin: 1rem;
+}

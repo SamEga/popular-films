@@ -1,0 +1,14 @@
+<h3 class="rec-header">Recommendations</h3>
+<div class="recommendations">
+  <div *ngFor="let rec of recommendations">
+    <div *ngIf="load" class="desc-film-wrapper">
+      <p>{{ rec.title }}</p>
+      <img
+        [src]="
+          cfg.images.base_url + cfg.images.backdrop_sizes[0] + rec.backdrop_path
+        "
+        alt=""
+      />
+    </div>
+  </div>
+</div>

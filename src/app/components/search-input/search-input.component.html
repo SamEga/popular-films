@@ -1,0 +1,31 @@
+<form class="search-form">
+  <mat-form-field class="search-full-width">
+    <input
+      matInput
+      placeholder="Search"
+      aria-label="Search"
+      autofocus
+      [matAutocomplete]="auto"
+      (keyup)="searchFilm($event)"
+    />
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option
+        *ngFor="let film of filteredFilms"
+        routerLink="/description/{{film.id}}"
+      >
+        <img
+          class="search-option-img"
+          aria-hidden
+          height="30"
+          [src]="
+            cfg.images.base_url +
+            cfg.images.backdrop_sizes[0] +
+            film.backdrop_path
+          "
+        />
+        <span>{{ film.original_title }}</span> |
+        <small>Genres: {{ searchGenre(film.genre_ids) }}</small>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>

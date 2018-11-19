@@ -1,0 +1,10 @@
+<app-nav-bar></app-nav-bar>
+<h3 class="favorites-header">Favorites Films</h3>
+<div class="fav-wrapper">
+  <div class="fav" *ngFor="let fav of favorites">
+    <p>{{ fav.title }}</p>
+    <button class="btn-film" (click)="delFav(fav.id)" mat-raised-button>
+      Delete
+    </button>
+  </div>
+</div>

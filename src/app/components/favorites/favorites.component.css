@@ -1,0 +1,20 @@
+.favorites-header {
+  text-align: center;
+  text-transform: uppercase;
+}
+.fav {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.fav p {
+  margin: 1rem;
+}
+.fav button:hover {
+  background-color: #e64747;
+}
+.fav-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}

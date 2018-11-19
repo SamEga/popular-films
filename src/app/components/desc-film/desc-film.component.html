@@ -1,0 +1,37 @@
+<app-nav-bar></app-nav-bar>
+<div *ngIf="load" class="desc-film-wrapper">
+  <div class="img-film">
+    <img
+      [src]="
+        cfg.images.base_url + cfg.images.backdrop_sizes[2] + film.backdrop_path
+      "
+      alt=""
+    />
+  </div>
+  <div class="desc-data-wrapper">
+    <div class="add-fav-wrapper">
+      <h2 class="film-title">{{ film.title }}</h2>
+      <!-- <div class="div" *ngIf="!checkFav(film.id)"> -->
+      <button mat-fab color="accent" (click)="addFav(film)">&#9733;</button>
+      <!-- </div> -->
+    </div>
+    <span class="rating">
+      <span class="desc-header">Rating</span>{{ film.vote_average }}
+    </span>
+    <span class="budget">
+      <span class="desc-header">Budget</span>{{ film.budget }}&#36;
+    </span>
+    <span class="genres">
+      <span class="desc-header">Genres</span>
+      <span *ngFor="let genre of film.genres" class="genres-name">{{
+        genre.name
+      }}</span>
+    </span>
+    <span class="release-date">
+      <span class="desc-header">Release date</span
+      >{{ converDate(film.release_date) }}
+    </span>
+    <p class="desc-text">{{ film.overview }}</p>
+  </div>
+</div>
+<app-recommendations></app-recommendations>

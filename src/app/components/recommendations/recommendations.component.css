@@ -1,0 +1,13 @@
+.recommendations {
+  display: flex;
+  max-width: 100%;
+  overflow: scroll;
+  margin: 1rem;
+}
+.desc-film-wrapper {
+  margin: 0 5px;
+}
+
+.rec-header {
+  margin-left: 2rem;
+}

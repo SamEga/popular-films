@@ -1,0 +1,44 @@
+.desc-film-wrapper {
+  margin: 2rem;
+  display: flex;
+}
+.desc-data-wrapper {
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.img-film img {
+  width: 600px;
+  background-size: cover;
+}
+.desc-header {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #748491;
+  text-transform: uppercase;
+  margin-right: 1rem;
+}
+.desc-data-wrapper span {
+  margin-top: 1rem;
+}
+.genres .genres-name {
+  margin-right: 5px;
+}
+.add-fav-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.add-fav-wrapper button {
+  font-size: 2rem;
+}
+@media screen and (max-width: 600px) {
+  .desc-film-wrapper {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .img-film img {
+    width: 100%;
+    background-size: cover;
+  }
+}
